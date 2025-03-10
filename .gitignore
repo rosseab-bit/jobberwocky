@@ -1,0 +1,3 @@
+env/
+jobberwocky/db.sqlite3
+jobberwocky/.env
