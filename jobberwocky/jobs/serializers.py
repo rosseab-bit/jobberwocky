@@ -17,7 +17,6 @@ class JobListCreateSerializer(serializers.ModelSerializer):
         model = JobList
         fields = ['position', 'skill', 'country', 'city', 'work_type', 'salary_range_min', 'salary_range_max']
     def to_internal_value(self, data):
-        # Asegurarse de que el campo work_type esté en minúsculas antes de guardarlo
         if 'work_type' in data:
-            data['work_type'] = data['work_type'].lower()  # Convertir el tipo de trabajo a minúsculas
+            data['work_type'] = data['work_type'].lower()
         return super().to_internal_value(data)

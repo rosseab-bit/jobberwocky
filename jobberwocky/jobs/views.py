@@ -70,7 +70,6 @@ def jobs_list_view(request):
 
         serializer = JobListSerializer(jobs, many=True)
         join_data_api = serializer.data + format_data_api(api_data)
-        print('\n \n \n ',format_data_api(api_data))
         return Response(join_data_api)
     elif request.method == 'POST':
         #serializer = JobListSerializer(data=request.data)

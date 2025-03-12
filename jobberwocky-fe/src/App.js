@@ -5,7 +5,6 @@ import axios from "axios";
 function App() {
   const [valueSearch, setValueSearch] = useState("");
   const [dataJobs, setDataJobs] = useState([]);
-  const [filterData, setFilterData] = useState([]);
   const [loading, setLoading] = useState(false);
   const handleSearch = (e) => {
     console.log("value search: ", e.target.value);
@@ -14,7 +13,6 @@ function App() {
   const getDataJobs = async () => {
     try {
       const response = await axios.get("http://127.0.0.1:8000/api/joblist/");
-      console.log("# - response jobs: ", response.data);
       setDataJobs(response.data);
     } catch (err) {
       console.log("# - error get jobs: ", err);
