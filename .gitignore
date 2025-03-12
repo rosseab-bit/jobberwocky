@@ -1,3 +1,4 @@
 env/
 jobberwocky/db.sqlite3
 jobberwocky/.env
+obberwocky-fe/node_modules/
